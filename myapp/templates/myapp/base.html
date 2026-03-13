@@ -14,11 +14,11 @@
 </head>
 
 <body>
-
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">StudentMS</a>
+
+    <a class="navbar-brand fw-bold" href="#">StudentMS</a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
       <span class="navbar-toggler-icon"></span>
@@ -29,20 +29,49 @@
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'home' %}">Home</a>
+          <a class="nav-link text-white fw-semibold" href="{% url 'home' %}">Home</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="{% url 'result' %}">Results</a>
+          <a class="nav-link text-white fw-semibold" href="{% url 'result' %}">Results</a>
         </li>
+
       </ul>
+
     </div>
   </div>
 </nav>
-
-<!-- Page Content -->
 <div class="container mt-4">
     {% block content %}
+    <!-- Hero Section -->
+<div class="container mt-5 text-center">
+
+  <div class="p-5 mb-4 bg-white rounded-4 shadow">
+
+    <h1 class="display-5 fw-bold text-primary">
+      Student Management System
+    </h1>
+
+    <p class="lead mt-3">
+      Welcome to the Student Management System Created - Mahesh Raj Lamsal. <br> 
+      Here you can easily view student records, academic performance,
+      personal information, and manage student data efficiently.
+    </p>
+
+    <hr class="my-4">
+
+    <p class="mb-4">
+      Click the button below to explore the list of students and check their results.
+    </p>
+
+    <a href="{% url 'result' %}" class="btn btn-primary btn-lg px-4">
+      View Results
+    </a>
+
+  </div>
+
+</div>
+<!-- Page Content -->
     {% endblock %}
 </div>
 
