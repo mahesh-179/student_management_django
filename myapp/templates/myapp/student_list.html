@@ -1,0 +1,28 @@
+{% extends "myapp/base.html" %}
+
+{% block title %} Student Result {% endblock %}
+
+{% block content %}
+
+<h2>Student List</h2>
+
+<table class="table">
+    <tr>
+        <th>Name</th>
+        <th>Roll</th>
+        <th>GPA</th>
+        <th>Final Grade</th>
+    </tr>
+
+    {% for student in students %}
+    <tr>
+        <td>{{ student.name }}</td>
+        <td>{{ student.rollno }}</td>
+        <td>{{ student.gpa }}</td>
+        <td>{{ student.final_grade }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+{% endblock %}
