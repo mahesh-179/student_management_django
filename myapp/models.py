@@ -6,21 +6,14 @@ class Student(models.Model):
     rollno = models.IntegerField()
     gpa = models.FloatField()
     final_grade = models.CharField(max_length=3)
-
-    def __str__(self):
-       return self.name
-
-class StudentProfile(models.Model):
-    student = models.OneToOneField(Student, on_delete=models.CASCADE)
-
     image = models.ImageField(upload_to='students/')
     dob = models.DateField()
     address = models.TextField()
     joining_date = models.DateField()
+    gmail=models.CharField(max_length=30)
 
     def __str__(self):
-        return self.student.name
-
+       return self.name
 
 
 
